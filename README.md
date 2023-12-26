@@ -49,6 +49,8 @@ Check out our FAQ for more information.
   - [**December 22 - Rotten Oranges**](#december-22---rotten-oranges)
   - [**December 23 - Dominoes**](#december-23---dominoes)
   - [**December 24 - Golden Rule Violation**](#december-24---golden-rule-violation)
+  - [**December 25 - Harmony Hurdle**](#december-25---harmony-hurdle)
+  - [**December 26 - The Phantom Cycle**](#december-26---the-phantom-cycle)
   - [**FAQ**](#faq)
 
 
@@ -1164,6 +1166,74 @@ he must spend rotating dominoes to make his wish come true.
     - [Divide And Conquer](https://www.javatpoint.com/divide-and-conquer-introduction)
     - [Merge Sort](https://www.javatpoint.com/merge-sort)  
 ----
+### December 25 - Harmony Hurdle
+
+   #### Problem Statement
+   In a parallel universe, tasks await execution, each with dependencies. Task 'i' can only be done when all tasks in dependencies[i] are complete. Write a function to calculate the minimum time needed to 
+   complete all tasks, considering parallel execution while respecting task dependencies. Can you optimize the parallel execution plan?
+
+   <p align="center"><img src="https://github.com/SVCE-ACM/A-December-Of-Algorithms-2023/assets/153520105/febee453-b9f4-42df-a165-adf13025a620"></p>
+   
+   #### Sample Input/Output 1
+   ```
+      Input: tasks = [1, 2, 3, 4, 5]
+             dependencies = [[], [1], [2], [3], [4, 1]]
+
+      Output: 6
+   ```
+
+   #### Explanation
+   ```
+   Task 1 has no dependencies and can be executed first.
+   Task 2 depends on Task 1.
+   Task 3 depends on Task 2.
+   Task 4 depends on Task 3.
+   Task 5 depends on both Task 4 and Task 1, so it can only start after Task 4 and Task 1 are completed.
+   The minimum time required to execute all tasks is 6.
+   ```
+   #### Sample Input/Output 2
+   ```
+      Input: tasks = [1, 2, 3, 4, 5]
+             dependencies = [[], [1], [2], [3], [4]]
+
+      Output: 5
+   ```
+    
+- **References**
+    - [Topological Sorting](https://www.geeksforgeeks.org/topological-sorting/)
+----
+
+### December 26 - The Phantom Cycle
+
+   #### Problem Statement
+   Hackers use sophisticated methods to exploit computer systems, such as exploiting vulnerabilities in memory management mechanisms like linked lists. Linked lists are commonly used data structures in 
+   programming, but they can be susceptible to errors that can be exploited by hackers. In this challenge, you must identify a specific vulnerability in a linked list implementation. Your goal is to determine 
+   whether the linked list contains any cyclic references, which could indicate a malicious attempt to execute the commands repeatedly or cause the system to crash.
+
+   <p align="center"><img src="https://github.com/SVCE-ACM/A-December-Of-Algorithms-2023/assets/153520105/a862cf5b-4a90-4eab-9045-b4cd58561692" width = "350"></p>
+   
+   #### Sample Input/Output 1
+   ```
+   Input: 1 -> 2 -> 3 -> 4 -> 5 -> 1
+   Output: Cycle Found
+   ```
+
+   #### Explanation
+   ```
+   The linked list contains a cyclic reference. The last node (5) points back to the first node (1), creating a loop that will never terminate. This cyclic reference could
+   indicate a malicious attempt to execute the commands repeatedly or cause the system to crash.       
+   ```
+   #### Sample Input/Output 2
+   ```
+    Input: 1 -> 2 -> 3 -> 4 -> 5 -> None
+    Output: No Cycle Found
+   ``` 
+    
+- **References**
+    - [Linked List](https://www.tutorialspoint.com/data_structures_algorithms/linked_lists_a)
+    - [Cycle Detection in Linked Lists](https://www.geeksforgeeks.org/problems/detect-loop-in-linked-list/1)
+----
+
 FAQ
 ======
 
